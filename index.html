@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #74ebd5;
+            color: black;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #5fd3c4;
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 15px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Jan Kowalski</h1>
+    <p><strong>Zawód:</strong> Student informatyki</p>
+    <p><strong>Hobby:</strong> Programowanie, gry komputerowe, sport</p>
+    <p><strong>Ulubiony język:</strong> JavaScript</p>
+
+    <button onclick="pokazDlaczego()">Dlaczego JavaScript?</button>
+
+    <p id="opis" class="hidden">
+        JavaScript jest moim ulubionym językiem, ponieważ pozwala tworzyć interaktywne strony internetowe 
+        i działa zarówno po stronie klienta, jak i serwera.
+    </p>
+</div>
+
+<script>
+    function pokazDlaczego() {
+        const opis = document.getElementById("opis");
+        if (opis.classList.contains("hidden")) {
+            opis.classList.remove("hidden");
+        } else {
+            opis.classList.add("hidden");
+        }
+    }
+</script>
+
+</body>
+</html>
